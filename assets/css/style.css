@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+  color: #000000;
+  display: grid;
+  grid-template-areas: "aside" "search" "main" "footer";
+  grid-template-rows: 8% 10% auto 8%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+i {
+  font-size: 1.25rem;
+  margin-left: 1rem;
+}
+
+li a{
+  text-decoration: none;
+  color: #000000;
+}
+
+.logo {
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+div h1 {
+  display: flex;
+  margin-left: 12rem;
+}
+
+
+.menu {
+  display: none;
+  list-style-type: none;
+}
+
+
+aside {
+  grid-area: aside;
+  background-color: #dadaab;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.contenedor-search {
+  grid-area: search;
+  background-color: #c3d3a8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+select {
+  width: 80%;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+
+main {
+  grid-area: main;
+  background-color: #b9b9b4;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.imagen {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: #c3d3a8;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease;
+}
+
+.imagen:hover {
+  filter: grayscale(0%);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.pagination a {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: 0.2rem solid #293a2e;
+  border-radius: 1rem;
+  color: rgb(0, 0, 0);
+  margin: 0.5rem;
+  margin-top: 1rem;
+}
+
+.pagination a.active {
+  background-color: #2e4b37;
+  color: beige;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  background-color: #c3d3a8;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.icons a {
+  color: #76a858;
+  text-decoration: none;
+}
+
+.icons i {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.icons a:hover {
+  color: #0073e6;
+}
+
+
+@media (min-width: 576px) {
+  body {
+    grid-template-areas: "aside search" "aside main" "footer footer";
+    grid-template-columns: 15% auto;
+    grid-template-rows: 8% auto 10%;
+  }
+
+  .logo {
+    display: flex;
+    padding-top: 1.5rem;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contenedor-search {
+    height: 6rem;
+  }
+
+  select {
+    display: flex;
+    margin: 30px;
+    padding: 10px;
+    font-size: large;
+  }
+
+  label {
+    margin-top: 2rem;
+    font-size: large;
+    font-weight: 500;
+  }
+
+
+  aside {
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 1.5rem;
+    width: auto;
+    height: auto;
+  }
+
+  header h1 {
+    display: flex;
+    font-size: 25px;
+    padding-top: 1.5rem;
+    margin-right: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  i {
+    display: flex;
+    margin-right: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div h1 {
+    display: flex;
+    margin-left: 1.5rem;
+
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  menu li {
+    margin-top: 3rem;
+    margin-right: 2rem;
+    line-height: 4rem;
+    font-size: 20px;
+    font-weight: 600;
+    color: #272c28;
+  }
+
+  .bars {
+    display: none;
+  }
+
+  .imagenes {
+    grid-area: cards;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  .imagen {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    min-height: 200px;
+    font-weight: bold;
+    padding: 40px;
+    background-color: #c3d3a8;
+  }
+
+  button {
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+
+  footer {
+    grid-area: footer;
+    display: flex;
+    background-color: #c3d3a8;
+    font-size: 18px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    bottom: 0;
+  }
+}
