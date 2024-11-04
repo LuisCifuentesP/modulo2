@@ -39,7 +39,7 @@ li a{
 
 div h1 {
   display: flex;
-  margin-left: 12rem;
+  margin-left: 8rem;
 }
 
 
@@ -92,9 +92,14 @@ main {
   justify-content: center;
 }
 
+.imagenes{
+  padding-right:2rem;
+}
+
 .imagen {
   display: flex;
   flex-direction: column;
+  width: 380px;
   border-radius: 10px;
   background-color: #c3d3a8;
   filter: grayscale(100%);
@@ -164,7 +169,8 @@ footer {
 }
 
 
-@media (min-width: 1075px) {
+
+@media (min-width: 576px) {
   body {
     grid-template-areas: "aside search" "aside main" "footer footer";
     grid-template-columns: 15% auto;
