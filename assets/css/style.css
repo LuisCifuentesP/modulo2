@@ -173,7 +173,7 @@ footer {
 @media (min-width: 1000px) {
   body {
     grid-template-areas: "aside search" "aside main" "footer footer";
-    grid-template-columns: minmax(300px,auto-fit) 15% auto;
+    grid-template-columns: minmax(300px, 1fr) 15% auto;
     grid-template-rows: 8% auto 10%;
     margin: 0 auto;
   }
